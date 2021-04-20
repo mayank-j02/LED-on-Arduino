@@ -1,0 +1,33 @@
+const int ledPin = 0;
+
+void setup() {
+
+Serial.begin(9600);
+
+pinMode(13, OUTPUT);
+
+}
+
+void loop() {
+
+int ldr_value = analogRead(A0);
+
+	if (ldr_value < 300) {
+
+		digitalWrite(13, HIGH);
+
+		Serial.println("LDR is DARK, LED is ON");
+      delay(50);
+
+	}
+
+	else {
+
+		digitalWrite(13, LOW);
+
+		Serial.println("---------------");
+      delay(50);
+
+	}
+
+}
